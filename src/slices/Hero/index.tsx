@@ -7,7 +7,11 @@ import { useGSAP } from "@gsap/react";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/app/components/Bounded";
 import Button from "@/app/components/Button";
-gsap.registerPlugin(useGSAP);
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { View } from "@react-three/drei";
+import Scene from "./Scene";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 /**
  * Props for `Hero`.
  */
@@ -32,6 +36,42 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       .from(".hero-subheading", { opacity: 0, y: 30 }, "+=.8")
       .from(".hero-body", { opacity: 0, y: 10 })
       .from(".hero-button", { opacity: 0, y: 10, duration: 0.6 });
+
+    const scrollTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1.5,
+        // markers: true,
+      },
+    });
+
+    scrollTl
+      .fromTo(
+        "body",
+        {
+          backgroundColor: "#FDE047",
+        },
+        {
+          backgroundColor: "#D9F99D",
+          overwrite: true,
+        },
+        1,
+      )
+      .from(".text-side-heading .split-char", {
+        scale: 1.3,
+        y: 40,
+        rotate: -25,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "back.out(3)",
+        duration: 0.5,
+      })
+      .from(".text-side-body", {
+        y: 20,
+        opacity: 0,
+      });
   });
   return (
     <Bounded
@@ -39,6 +79,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="hero opacity-0"
     >
+      <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+        <Scene />
+      </View>
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-items-center text-center">

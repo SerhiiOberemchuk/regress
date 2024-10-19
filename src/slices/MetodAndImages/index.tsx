@@ -33,11 +33,18 @@ const SectionImage = ({ slice }: SectionImageProps): JSX.Element => {
             </li>
           ))}
         </ul>
-        <PrismicRichText field={slice.primary.title} />
+        <PrismicRichText
+          field={slice.primary.title}
+          components={{
+            heading2: ({ children }) => <h2>{children}</h2>,
+          }}
+        />
         <PrismicRichText field={slice.primary.descriptionmetod} />
         <ul>
-          {slice.primary.descriptionmetodlist.map((item) => (
-            <PrismicRichText field={item.itemlist} />
+          {slice.primary.descriptionmetodlist.map((item, index) => (
+            <li key={index}>
+              <PrismicRichText field={item.itemlist} />
+            </li>
           ))}
         </ul>
         <PrismicRichText field={slice.primary.golofregress} />

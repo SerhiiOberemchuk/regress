@@ -1,0 +1,48 @@
+.hero {
+  padding: 3rem 0 3rem;
+}
+.heroContainer {
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.heroBody {
+  background-color: var(--color-primary);
+  max-width: 37.5rem;
+}
+.heroBodyFlex {
+  padding: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2.25rem;
+}
+.heroName {
+  font-size: 36px;
+  color: var(--text-white);
+  text-transform: uppercase;
+}
+.textBody {
+  color: var(--text-grey);
+}
+.textBody span {
+  color: var(--text-white);
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 960px) {
+  .heroContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+  .subgrid {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: auto;
+  }
+}

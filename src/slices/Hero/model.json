@@ -21,13 +21,13 @@
             "single": "heading1"
           }
         },
-        "subheading": {
+        "heroname": {
           "type": "StructuredText",
           "config": {
-            "label": "Subheading",
+            "label": "HeroName",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "body": {
@@ -39,47 +39,19 @@
             "single": "paragraph"
           }
         },
-        "button_text": {
+        "telnumber": {
           "type": "Text",
           "config": {
-            "label": "Button Text",
+            "label": "TelNumber",
             "placeholder": ""
           }
         },
-        "button_link": {
-          "type": "Link",
-          "config": {
-            "label": "Button Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null,
-            "allowText": true
-          }
-        },
-        "cans_image": {
+        "heroimage": {
           "type": "Image",
           "config": {
-            "label": "Cans Image",
+            "label": "HeroImage",
             "constraint": {},
             "thumbnails": []
-          }
-        },
-        "second_heading": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Second Heading",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading2"
-          }
-        },
-        "second_button": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Second Button",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,em,strong"
           }
         }
       },

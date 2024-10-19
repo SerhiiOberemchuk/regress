@@ -1,0 +1,39 @@
+.header {
+  background-color: var(--color-primary);
+}
+
+.content {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 700;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 560px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .links {
+    flex-direction: row;
+  }
+}

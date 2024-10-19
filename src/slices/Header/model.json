@@ -21,6 +21,99 @@
             "select": null,
             "allowText": true
           }
+        },
+        "textlinkmetod": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkMetod",
+            "placeholder": ""
+          }
+        },
+        "linkprice": {
+          "type": "Link",
+          "config": {
+            "label": "LinkPrice",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "textlinkprice": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkPrice",
+            "placeholder": ""
+          }
+        },
+        "linkadvice": {
+          "type": "Link",
+          "config": {
+            "label": "LinkAdvice",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "textlinkadvice": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkAdvice",
+            "placeholder": ""
+          }
+        },
+        "linksession": {
+          "type": "Link",
+          "config": {
+            "label": "LinkSession",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "textlinksession": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkSession",
+            "placeholder": ""
+          }
+        },
+        "language": {
+          "type": "Select",
+          "config": {
+            "label": "Language",
+            "placeholder": "",
+            "options": [
+              "UA",
+              "EN"
+            ],
+            "default_value": "UA"
+          }
+        },
+        "languages": {
+          "type": "Group",
+          "config": {
+            "label": "Languages",
+            "repeat": true,
+            "fields": {
+              "ukraine": {
+                "type": "Text",
+                "config": {
+                  "label": "Ukraine",
+                  "placeholder": ""
+                }
+              },
+              "english": {
+                "type": "Text",
+                "config": {
+                  "label": "English",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

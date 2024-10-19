@@ -10,6 +10,81 @@
 					"url": "https://prismic.io",
 					"text": "either"
 				}
+			},
+			"textlinkmetod": {
+				"__TYPE__": "FieldContent",
+				"value": "then",
+				"type": "Text"
+			},
+			"textlinksession": {
+				"__TYPE__": "FieldContent",
+				"value": "consist",
+				"type": "Text"
+			},
+			"linksession": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "listen"
+				}
+			},
+			"textlinkprice": {
+				"__TYPE__": "FieldContent",
+				"value": "notice",
+				"type": "Text"
+			},
+			"textlinkadvice": {
+				"__TYPE__": "FieldContent",
+				"value": "forest",
+				"type": "Text"
+			},
+			"language": {
+				"__TYPE__": "FieldContent",
+				"value": "EN",
+				"type": "Select"
+			},
+			"linkprice": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "eat"
+				}
+			},
+			"linkadvice": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "parts"
+				}
+			},
+			"languages": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"ukraine",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "height",
+									"type": "Text"
+								}
+							],
+							[
+								"english",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "spent",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

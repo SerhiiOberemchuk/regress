@@ -14,51 +14,43 @@
 					}
 				]
 			},
-			"subheading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ipsum officia sunt cillum occaecat. Duis labore sunt id velit elit dolore adipisicing nostrud. Et sint sunt dolore non fugiat ullamco aliquip consectetur occaecat excepteur in qui."
-						}
-					}
-				]
-			},
 			"body": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Mollit laboris duis tempor laboris aliqua laborum cupidatat culpa cillum. Proident labore reprehenderit ullamco nulla Lorem cillum Lorem ut consequat."
+							"text": "Laborum duis id incididunt ipsum proident ullamco sunt sunt consequat occaecat elit duis. Exercitation eiusmod quis aliqua incididunt in incididunt ipsum ex mollit. Incididunt elit eu ad aute nisi reprehenderit exercitation aliquip est magna ex."
 						}
 					}
 				]
 			},
-			"button_text": {
+			"heroname": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore magna mollit dolore quis quis reprehenderit consequat enim sit do ullamco elit. Veniam labore nostrud Lorem dolor consectetur in Lorem deserunt. Elit incididunt quis do sint."
+						}
+					}
+				]
+			},
+			"telnumber": {
 				"__TYPE__": "FieldContent",
-				"value": "bare",
+				"value": "popular",
 				"type": "Text"
 			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev",
-					"text": "horn"
-				}
-			},
-			"cans_image": {
+			"heroimage": {
 				"origin": {
 					"id": "main",
-					"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-					"width": 4172,
-					"height": 4000
+					"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+					"width": 3935,
+					"height": 5894
 				},
-				"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-				"width": 4172,
-				"height": 4000,
+				"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+				"width": 3935,
+				"height": 5894,
 				"edit": {
 					"zoom": 1,
 					"crop": {
@@ -71,28 +63,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"second_heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Failed"
-						}
-					}
-				]
-			},
-			"second_button": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Est eiusmod quis sint aliquip."
-						}
-					}
-				]
 			}
 		},
 		"items": []

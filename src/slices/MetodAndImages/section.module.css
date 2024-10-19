@@ -1,0 +1,17 @@
+.section {
+  background-color: var(--color-primary);
+  padding: 60px 0 30px;
+}
+
+.listTopImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.listTopImages li:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}

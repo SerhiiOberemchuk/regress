@@ -5,7 +5,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Group } from "three";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import FloatingCan from "@/app/components/FloatingCan";
+import FloatingCan from "@/app/components/Hero/FloatingCan";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);

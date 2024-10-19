@@ -23,12 +23,7 @@ function ViewCanvas({}: Props) {
         fov: 30,
       }}
     >
-      {/* <mesh rotation={[0.5, 0.5, 0]} position={[1, 0, 0]}>
-        <boxGeometry />
-        <meshStandardMaterial color={"hotpink"} />
-      </mesh> */}
       <View.Port />
-      {/* <Scene /> */}
     </Canvas>
   );
 }

@@ -5,4 +5,5 @@ import dynamic from "next/dynamic";
 export const components = {
   header: dynamic(() => import("./Header")),
   hero: dynamic(() => import("./Hero")),
+  section_image: dynamic(() => import("./MetodAndImages")),
 };

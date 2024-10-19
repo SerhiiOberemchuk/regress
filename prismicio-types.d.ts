@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeaderSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = SectionImageSlice | HeaderSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -79,6 +79,31 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
+ * Item in *Header → Default → Primary → Languages*
+ */
+export interface HeaderSliceDefaultPrimaryLanguagesItem {
+  /**
+   * Ukraine field in *Header → Default → Primary → Languages*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.languages[].ukraine
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ukraine: prismic.KeyTextField;
+
+  /**
+   * English field in *Header → Default → Primary → Languages*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.languages[].english
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  english: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *Header → Default → Primary*
  */
 export interface HeaderSliceDefaultPrimary {
@@ -91,6 +116,99 @@ export interface HeaderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   linkmetods: prismic.LinkField;
+
+  /**
+   * TextLinkMetod field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.textlinkmetod
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinkmetod: prismic.KeyTextField;
+
+  /**
+   * LinkPrice field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.linkprice
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkprice: prismic.LinkField;
+
+  /**
+   * TextLinkPrice field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.textlinkprice
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinkprice: prismic.KeyTextField;
+
+  /**
+   * LinkAdvice field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.linkadvice
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkadvice: prismic.LinkField;
+
+  /**
+   * TextLinkAdvice field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.textlinkadvice
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinkadvice: prismic.KeyTextField;
+
+  /**
+   * LinkSession field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.linksession
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linksession: prismic.LinkField;
+
+  /**
+   * TextLinkSession field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.textlinksession
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinksession: prismic.KeyTextField;
+
+  /**
+   * Language field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: UA
+   * - **API ID Path**: header.default.primary.language
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  language: prismic.SelectField<"UA" | "EN", "filled">;
+
+  /**
+   * Languages field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.languages[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  languages: prismic.GroupField<
+    Simplify<HeaderSliceDefaultPrimaryLanguagesItem>
+  >;
 }
 
 /**
@@ -135,14 +253,14 @@ export interface HeroSliceDefaultPrimary {
   heading: prismic.TitleField;
 
   /**
-   * Subheading field in *Hero → Default → Primary*
+   * HeroName field in *Hero → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.subheading
+   * - **API ID Path**: hero.default.primary.heroname
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subheading: prismic.RichTextField;
+  heroname: prismic.RichTextField;
 
   /**
    * Body field in *Hero → Default → Primary*
@@ -155,54 +273,24 @@ export interface HeroSliceDefaultPrimary {
   body: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Default → Primary*
+   * TelNumber field in *Hero → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.button_text
+   * - **API ID Path**: hero.default.primary.telnumber
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  button_text: prismic.KeyTextField;
+  telnumber: prismic.KeyTextField;
 
   /**
-   * Button Link field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Cans Image field in *Hero → Default → Primary*
+   * HeroImage field in *Hero → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.cans_image
+   * - **API ID Path**: hero.default.primary.heroimage
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  cans_image: prismic.ImageField<never>;
-
-  /**
-   * Second Heading field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.second_heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  second_heading: prismic.TitleField;
-
-  /**
-   * Second Button field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.second_button
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  second_button: prismic.RichTextField;
+  heroimage: prismic.ImageField<never>;
 }
 
 /**
@@ -232,6 +320,162 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Item in *MetodAndImages → Default → Primary → Images*
+ */
+export interface SectionImageSliceDefaultPrimaryImagseItem {
+  /**
+   * Image field in *MetodAndImages → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.imagse[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *MetodAndImages → Default → Primary → DescriptionMetodList*
+ */
+export interface SectionImageSliceDefaultPrimaryDescriptionmetodlistItem {
+  /**
+   * ItemList field in *MetodAndImages → Default → Primary → DescriptionMetodList*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.descriptionmetodlist[].itemlist
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  itemlist: prismic.RichTextField;
+}
+
+/**
+ * Item in *MetodAndImages → Default → Primary → ImagesBotttom*
+ */
+export interface SectionImageSliceDefaultPrimaryImagesbotttomItem {
+  /**
+   * image field in *MetodAndImages → Default → Primary → ImagesBotttom*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.imagesbotttom[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *MetodAndImages → Default → Primary*
+ */
+export interface SectionImageSliceDefaultPrimary {
+  /**
+   * Images field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.imagse[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  imagse: prismic.GroupField<
+    Simplify<SectionImageSliceDefaultPrimaryImagseItem>
+  >;
+
+  /**
+   * Title field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * DescriptionMetod field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.descriptionmetod
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descriptionmetod: prismic.RichTextField;
+
+  /**
+   * DescriptionMetodList field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.descriptionmetodlist[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  descriptionmetodlist: prismic.GroupField<
+    Simplify<SectionImageSliceDefaultPrimaryDescriptionmetodlistItem>
+  >;
+
+  /**
+   * GolOfRegress field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.golofregress
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  golofregress: prismic.RichTextField;
+
+  /**
+   * UsefulDescription field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.usefuldescription
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  usefuldescription: prismic.RichTextField;
+
+  /**
+   * ImagesBotttom field in *MetodAndImages → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section_image.default.primary.imagesbotttom[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  imagesbotttom: prismic.GroupField<
+    Simplify<SectionImageSliceDefaultPrimaryImagesbotttomItem>
+  >;
+}
+
+/**
+ * Default variation for MetodAndImages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SectionImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SectionImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MetodAndImages*
+ */
+type SectionImageSliceVariation = SectionImageSliceDefault;
+
+/**
+ * MetodAndImages Shared Slice
+ *
+ * - **API ID**: `section_image`
+ * - **Description**: SectionImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SectionImageSlice = prismic.SharedSlice<
+  "section_image",
+  SectionImageSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -258,6 +502,7 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeaderSlice,
+      HeaderSliceDefaultPrimaryLanguagesItem,
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,
@@ -265,6 +510,13 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SectionImageSlice,
+      SectionImageSliceDefaultPrimaryImagseItem,
+      SectionImageSliceDefaultPrimaryDescriptionmetodlistItem,
+      SectionImageSliceDefaultPrimaryImagesbotttomItem,
+      SectionImageSliceDefaultPrimary,
+      SectionImageSliceVariation,
+      SectionImageSliceDefault,
     };
   }
 }

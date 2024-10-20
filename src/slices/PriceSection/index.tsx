@@ -34,7 +34,7 @@ const PriceSection = ({ slice }: PriceSectionProps): JSX.Element => {
         />
         <ul className={styles.list}>
           {slice.primary.pricelist.map((item, index) => (
-            <li className={styles.item}>
+            <li key={index} className={styles.item}>
               <PrismicImage field={item.iconplan} width={100} />
               <PrismicRichText
                 field={item.titleplan}

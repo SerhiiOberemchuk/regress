@@ -1,0 +1,82 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"examplestitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Rabbit"
+						}
+					}
+				]
+			},
+			"exampleslist": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"titleexample",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Wrapped"
+											}
+										}
+									]
+								}
+							],
+							[
+								"descriptionexample",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Proident commodo occaecat commodo. Ut nostrud dolore esse laborum qui sunt est."
+											}
+										}
+									]
+								}
+							],
+							[
+								"iconexample",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+										"width": 4024,
+										"height": 4024
+									},
+									"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+									"width": 4024,
+									"height": 4024,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

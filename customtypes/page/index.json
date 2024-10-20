@@ -27,6 +27,21 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "price_section": {
+              "type": "SharedSlice"
+            },
+            "question_section": {
+              "type": "SharedSlice"
+            },
+            "what_you_need": {
+              "type": "SharedSlice"
+            },
+            "example": {
+              "type": "SharedSlice"
+            },
+            "results": {
+              "type": "SharedSlice"
+            },
             "section_image": {
               "type": "SharedSlice"
             },

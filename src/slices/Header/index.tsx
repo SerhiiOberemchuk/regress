@@ -16,9 +16,6 @@ export type HeaderProps = SliceComponentProps<Content.HeaderSlice>;
  */
 
 const Header = ({ slice }: HeaderProps): JSX.Element => {
-  const languages = slice.primary.languages;
-  console.log(languages);
-
   return (
     <header
       data-slice-type={slice.slice_type}

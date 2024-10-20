@@ -35,7 +35,7 @@
   color: var(--text-white);
   margin-top: 1rem;
 }
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .heroContainer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;

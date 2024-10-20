@@ -1,0 +1,45 @@
+{
+  "format": "custom",
+  "id": "subgroupitem",
+  "label": "SubgroupItem",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "ListQuestions",
+          "placeholder": ""
+        }
+      },
+      "subgrouptitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "SubgroupTitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "heading2"
+        }
+      },
+      "subgrouplist": {
+        "type": "Group",
+        "config": {
+          "label": "SubgroupList",
+          "repeat": true,
+          "fields": {
+            "subgroupitem": {
+              "type": "StructuredText",
+              "config": {
+                "label": "SubgroupItem",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "question_section",
+  "type": "SharedSlice",
+  "name": "QuestionSection",
+  "description": "QuestionSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titlesection": {
+          "type": "StructuredText",
+          "config": {
+            "label": "TitleSection",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "listquestion": {
+          "type": "Group",
+          "config": {
+            "label": "ListQuestion",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Question",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

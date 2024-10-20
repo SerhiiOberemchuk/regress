@@ -1,0 +1,71 @@
+{
+  "id": "results",
+  "type": "SharedSlice",
+  "name": "Results",
+  "description": "Results",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titleresultsection": {
+          "type": "StructuredText",
+          "config": {
+            "label": "TitleResultSection",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "resultsectionimage": {
+          "type": "Image",
+          "config": {
+            "label": "ResultSectionImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "resultslist": {
+          "type": "Group",
+          "config": {
+            "label": "ResultsList",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "titlelist": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "TitleList",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "itemdescription": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "ItemDescription",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+.section {
+  padding: 3.75rem 0;
+}
+.title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  text-align: center;
+}
+.list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.item {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  align-items: center;
+  padding: 2.25rem 1.125rem 2.5rem;
+}
+.item img {
+  width: 100px;
+  height: 100px;
+}
+.item h3 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.item p {
+  font-size: 1rem;
+  color: var(--text-grey);
+}
+
+@media screen and (min-width: 960px) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem 1.25rem;
+  }
+}

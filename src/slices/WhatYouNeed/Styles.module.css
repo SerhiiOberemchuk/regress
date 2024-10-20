@@ -1,0 +1,31 @@
+.section {
+  padding: 4.5rem 2.875rem;
+  background-color: var(--color-primary);
+}
+
+.title {
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 2.875rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+.item {
+  display: flex;
+  gap: 1.25rem;
+}
+.item img {
+  width: 5rem;
+  height: 5rem;
+}
+.item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.item p {
+  color: var(--text-grey);
+}

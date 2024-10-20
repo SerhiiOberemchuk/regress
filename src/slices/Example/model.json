@@ -1,0 +1,63 @@
+{
+  "id": "example",
+  "type": "SharedSlice",
+  "name": "Example",
+  "description": "Example",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "examplestitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ExamplesTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "exampleslist": {
+          "type": "Group",
+          "config": {
+            "label": "ExamplesList",
+            "repeat": true,
+            "fields": {
+              "iconexample": {
+                "type": "Image",
+                "config": {
+                  "label": "IconExample",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "titleexample": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "TitleExample",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "heading3"
+                }
+              },
+              "descriptionexample": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "DescriptionExample",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

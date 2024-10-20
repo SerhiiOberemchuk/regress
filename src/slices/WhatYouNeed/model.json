@@ -1,0 +1,63 @@
+{
+  "id": "what_you_need",
+  "type": "SharedSlice",
+  "name": "WhatYouNeed",
+  "description": "WhatYouNeed",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "list": {
+          "type": "Group",
+          "config": {
+            "label": "List",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "titleitem": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "TitleItem",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "heading3"
+                }
+              },
+              "itemdescription": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "ItemDescription",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

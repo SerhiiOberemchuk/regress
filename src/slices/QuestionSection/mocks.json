@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titlesection": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Enough"
+						}
+					}
+				]
+			},
+			"listquestion": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"question",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Exercitation magna eu excepteur officia ea adipisicing ullamco. Sunt sint quis sint id cillum ad culpa pariatur aliqua fugiat dolore sunt aliquip Lorem ad."
+											}
+										}
+									]
+								}
+							],
+							[
+								"answer",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sit voluptate do culpa mollit. Sit officia commodo ex cupidatat fugiat consectetur qui deserunt id enim eu voluptate fugiat officia. Nulla excepteur excepteur nisi deserunt esse occaecat anim ullamco nisi incididunt nisi nulla ut culpa."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

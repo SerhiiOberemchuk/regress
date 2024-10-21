@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | FooterSlice
   | ConsultationSlice
   | PriceSectionSlice
   | QuestionSectionSlice
@@ -388,6 +389,128 @@ export type ExampleSlice = prismic.SharedSlice<
   "example",
   ExampleSliceVariation
 >;
+
+/**
+ * Primary content in *Footer → Default → Primary*
+ */
+export interface FooterSliceDefaultPrimary {
+  /**
+   * ImageHero field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.imagehero
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagehero: prismic.ImageField<never>;
+
+  /**
+   * ContactWithMe field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.contactwithme
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  contactwithme: prismic.RichTextField;
+
+  /**
+   * Name field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * Hobby field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.hobby
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hobby: prismic.RichTextField;
+
+  /**
+   * LinkWhatsApp field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: WhatsApp
+   * - **API ID Path**: footer.default.primary.linkwhatsapp
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkwhatsapp: prismic.LinkField;
+
+  /**
+   * TextLinkWhatsApp field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.textlinkwhatsapp
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinkwhatsapp: prismic.KeyTextField;
+
+  /**
+   * LinkTelegram field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Telegram
+   * - **API ID Path**: footer.default.primary.linktelegram
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linktelegram: prismic.LinkField;
+
+  /**
+   * TextLinkTelegram field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.textlinktelegram
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textlinktelegram: prismic.KeyTextField;
+
+  /**
+   * BackgroundImage field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.backgroundimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundimage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FooterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Footer*
+ */
+type FooterSliceVariation = FooterSliceDefault;
+
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: Footer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
 
 /**
  * Item in *Header → Default → Primary → Languages*
@@ -1311,6 +1434,10 @@ declare module "@prismicio/client" {
       ExampleSliceDefaultPrimary,
       ExampleSliceVariation,
       ExampleSliceDefault,
+      FooterSlice,
+      FooterSliceDefaultPrimary,
+      FooterSliceVariation,
+      FooterSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryLanguagesItem,
       HeaderSliceDefaultPrimary,

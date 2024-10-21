@@ -1,0 +1,96 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "imagehero": {
+          "type": "Image",
+          "config": {
+            "label": "ImageHero",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "contactwithme": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ContactWithMe",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "hobby": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hobby",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "linkwhatsapp": {
+          "type": "Link",
+          "config": {
+            "label": "LinkWhatsApp",
+            "placeholder": "WhatsApp",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "textlinkwhatsapp": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkWhatsApp",
+            "placeholder": ""
+          }
+        },
+        "linktelegram": {
+          "type": "Link",
+          "config": {
+            "label": "LinkTelegram",
+            "placeholder": "Telegram",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "textlinktelegram": {
+          "type": "Text",
+          "config": {
+            "label": "TextLinkTelegram",
+            "placeholder": ""
+          }
+        },
+        "backgroundimage": {
+          "type": "Image",
+          "config": {
+            "label": "BackgroundImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

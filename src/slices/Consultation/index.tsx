@@ -21,6 +21,7 @@ const Consultation = ({ slice }: ConsultationProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={styles.section}
+      id="consultation"
     >
       <Container>
         <PrismicRichText field={slice.primary.title} />

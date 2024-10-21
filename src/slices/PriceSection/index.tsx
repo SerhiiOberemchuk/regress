@@ -23,6 +23,7 @@ const PriceSection = ({ slice }: PriceSectionProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={styles.section}
+      id="price"
     >
       <Container>
         <PrismicRichText

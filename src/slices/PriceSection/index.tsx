@@ -7,6 +7,7 @@ import {
 } from "@prismicio/react";
 import styles from "./Price.module.css";
 import Container from "@/app/components/common/Container";
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `PriceSection`.
@@ -35,7 +36,9 @@ const PriceSection = ({ slice }: PriceSectionProps): JSX.Element => {
         <ul className={styles.list}>
           {slice.primary.pricelist.map((item, index) => (
             <li key={index} className={styles.item}>
-              <PrismicImage field={item.iconplan} width={100} />
+              <div className={styles.iconBox}>
+                <PrismicImage field={item.iconplan} width={100} />
+              </div>
               <PrismicRichText
                 field={item.titleplan}
                 components={{
@@ -73,9 +76,9 @@ const PriceSection = ({ slice }: PriceSectionProps): JSX.Element => {
               </div>
               <PrismicRichText field={item.language} />
               <PrismicRichText field={item.price} />
-              <PrismicLink field={item.linktosectionpayment}>
+              <PrismicNextLink field={item.linktosectionpayment}>
                 <span className={styles.link}>{item.textlinkpaymant}</span>
-              </PrismicLink>
+              </PrismicNextLink>
             </li>
           ))}
         </ul>

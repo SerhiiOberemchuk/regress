@@ -1,0 +1,117 @@
+{
+  "id": "consultation",
+  "type": "SharedSlice",
+  "name": "Consultation",
+  "description": "Consultation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Consultation",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "list": {
+          "type": "Group",
+          "config": {
+            "label": "List",
+            "repeat": true,
+            "fields": {
+              "price": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Price",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "titleinclud": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "TitleInclud",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description1": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description1",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description2": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description2",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description3": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description3",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description4": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description4",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "description5": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description5",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "linktosection": {
+                "type": "Link",
+                "config": {
+                  "label": "LinkToSection",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "titlelink": {
+                "type": "Text",
+                "config": {
+                  "label": "TitleLink",
+                  "placeholder": "Book consultation"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

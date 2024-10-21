@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | ConsultationSlice
   | PriceSectionSlice
   | QuestionSectionSlice
   | WhatYouNeedSlice
@@ -145,6 +146,156 @@ export type SubgroupitemDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = PageDocument | SubgroupitemDocument;
+
+/**
+ * Item in *Consultation → Consultation → Primary → List*
+ */
+export interface ConsultationSliceDefaultPrimaryListItem {
+  /**
+   * Price field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].price
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  price: prismic.RichTextField;
+
+  /**
+   * TitleInclud field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].titleinclud
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titleinclud: prismic.RichTextField;
+
+  /**
+   * Description1 field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].description1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description1: prismic.RichTextField;
+
+  /**
+   * Description2 field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].description2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description2: prismic.RichTextField;
+
+  /**
+   * Description3 field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].description3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description3: prismic.RichTextField;
+
+  /**
+   * Description4 field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].description4
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description4: prismic.RichTextField;
+
+  /**
+   * Description5 field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].description5
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description5: prismic.RichTextField;
+
+  /**
+   * LinkToSection field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[].linktosection
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linktosection: prismic.LinkField;
+
+  /**
+   * TitleLink field in *Consultation → Consultation → Primary → List*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Book consultation
+   * - **API ID Path**: consultation.default.primary.list[].titlelink
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titlelink: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Consultation → Consultation → Primary*
+ */
+export interface ConsultationSliceDefaultPrimary {
+  /**
+   * Title field in *Consultation → Consultation → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * List field in *Consultation → Consultation → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: consultation.default.primary.list[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  list: prismic.GroupField<Simplify<ConsultationSliceDefaultPrimaryListItem>>;
+}
+
+/**
+ * Consultation variation for Consultation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ConsultationSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ConsultationSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Consultation*
+ */
+type ConsultationSliceVariation = ConsultationSliceDefault;
+
+/**
+ * Consultation Shared Slice
+ *
+ * - **API ID**: `consultation`
+ * - **Description**: Consultation
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ConsultationSlice = prismic.SharedSlice<
+  "consultation",
+  ConsultationSliceVariation
+>;
 
 /**
  * Item in *Example → Default → Primary → ExamplesList*
@@ -1150,6 +1301,11 @@ declare module "@prismicio/client" {
       SubgroupitemDocumentData,
       SubgroupitemDocumentDataSubgrouplistItem,
       AllDocumentTypes,
+      ConsultationSlice,
+      ConsultationSliceDefaultPrimaryListItem,
+      ConsultationSliceDefaultPrimary,
+      ConsultationSliceVariation,
+      ConsultationSliceDefault,
       ExampleSlice,
       ExampleSliceDefaultPrimaryExampleslistItem,
       ExampleSliceDefaultPrimary,

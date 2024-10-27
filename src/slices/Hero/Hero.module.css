@@ -25,14 +25,14 @@
 }
 .heroName {
   font-size: 36px;
-  color: var(--text-white);
+  color: var(--color-primary-blue);
   text-transform: uppercase;
 }
 .textBody {
   color: var(--text-grey);
 }
-.textBody span {
-  color: var(--text-white);
+.textBody a {
+  color: var(--color-primary-blue);
   margin-top: 1rem;
 }
 @media screen and (min-width: 960px) {

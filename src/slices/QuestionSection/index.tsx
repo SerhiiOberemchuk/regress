@@ -5,7 +5,6 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./Styles.module.css";
 import Container from "@/app/components/common/Container";
 import clsx from "clsx";
-import { GrAdd } from "react-icons/gr";
 import { useState } from "react";
 /**
  * Props for `QuestionSection`.
@@ -53,7 +52,18 @@ const QuestionSection = ({ slice }: QuestionSectionProps): JSX.Element => {
                     openIndex === index && styles.rotated,
                   )}
                 >
-                  <GrAdd width={40} height={40} />
+                  <svg
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                  >
+                    <g stroke="#000000" strokeLinecap="round" strokeWidth="2">
+                      <path d="M12 19V5" />
+                      <path d="M19 12H5" />
+                    </g>
+                  </svg>
                 </span>
               </button>
               <div

@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ua" className={roboto.className}>
+    <html lang="uk" className={roboto.className}>
       <Head>
         <script
           type="application/ld+json"
@@ -32,7 +32,7 @@ export default function RootLayout({
                 "https://tiktok.com/@raisa.regres",
                 // "https://facebook.com/your_facebook",
               ],
-              // logo: "https://regress.pro/path-to-your-logo.jpg",
+              logo: "https://regress.pro/logo.jpg",
             }),
           }}
         />

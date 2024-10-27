@@ -6,7 +6,6 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import styles from "./section.module.css";
-import clsx from "clsx";
 
 /**
  * Props for `SectionImage`.

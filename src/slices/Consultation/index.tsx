@@ -1,9 +1,5 @@
 import { Content } from "@prismicio/client";
-import {
-  PrismicRichText,
-  PrismicText,
-  SliceComponentProps,
-} from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./Consultation.module.css";
 import Container from "@/app/components/common/Container";
 import { PrismicNextLink } from "@prismicio/next";

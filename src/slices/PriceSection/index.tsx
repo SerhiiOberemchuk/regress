@@ -1,7 +1,6 @@
 import { Content } from "@prismicio/client";
 import {
   PrismicImage,
-  PrismicLink,
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";

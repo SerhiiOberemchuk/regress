@@ -3,6 +3,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import "./styles/app.css";
 import Developer from "./components/DeveloperLink/Developer";
+import Head from "next/head";
 
 const roboto = Roboto({
   style: ["italic", "normal"],
@@ -16,7 +17,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="ua" className={roboto.className}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Regress",
+              url: "https://regress.pro",
+              sameAs: [
+                "https://instagram.com/raisa.regres",
+                "https://tiktok.com/@raisa.regres",
+                // "https://facebook.com/your_facebook",
+              ],
+              // logo: "https://regress.pro/path-to-your-logo.jpg",
+            }),
+          }}
+        />
+      </Head>
       <body className="">
         <main>{children}</main>
         <Developer />

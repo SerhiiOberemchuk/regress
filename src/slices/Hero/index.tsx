@@ -7,14 +7,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/app/components/Hero/Bounded";
-// import Button from "@/app/components/Hero/Button";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { View } from "@react-three/drei";
-import Image from "next/image";
+
 import clsx from "clsx";
 import Container from "@/app/components/common/Container";
 import styles from "./Hero.module.css";
-// import Scene from "./Scene";
 
 export const pacifico = Pacifico({
   subsets: ["latin"],

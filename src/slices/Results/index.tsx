@@ -6,7 +6,6 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import styles from "./Result.module.css";
-import { lightTargetDirection } from "three/webgpu";
 
 /**
  * Props for `Results`.
